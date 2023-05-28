@@ -53,3 +53,11 @@ public function export()
     return Excel::download(new InvoicesExport, 'invoices.xlsx');
 }
 ```
+Sometime you can get that error:
+```php
+framework\cache\laravel-excel\laravel-excel-kyBO1xeSGzBNYK1FKJY0cdkKfsDGUcNH.html as a DOM Document
+```
+Clear the laravel-excel cache: You can run the following command on your terminal to clear the laravel-excel cache
+```php
+php artisan cache:clear laravel-excel
+```
